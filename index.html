@@ -1,0 +1,35 @@
+<a target="_blank" >
+<div class="container">
+  <div class="form">
+    <h2 class="section-header">Card Settings</h2>
+    <div class="setting">
+      <label for="image">Image</label>
+      <input type="file" name="image" id="image"/>
+    </div>
+    <div class="setting">
+      <label for="fillColour">Background Colour</label>
+      <input type="text" class="colour-picker" name="fillColour" id="fillColour" value="#272727"/>
+    </div>
+    <div class="setting">
+      <label for="strokeColour">Stroke Colour</label>
+      <input type="text" class="colour-picker" name="strokeColour" id="strokeColour" value="#4B4B4B"/>
+    </div>
+    <div class="setting">
+      <label for="strokeWidth">Stroke Width</label>
+      <input type="number" name="strokeWidth" id="strokeWidth" value="20" min="0" max="150"/>
+    </div>
+    <div class="setting">
+      <label for="borderRadius">Border Radius</label>
+      <input type="number" name="borderRadius" id="borderRadius" value="29" min="0" max="200"/>
+    </div>
+    <h2 class="section-header">Export</h2>
+    <input type="button" value="Export Card" id="exportCard" />
+    <input type="button" value="Export Preview" id="exportPreview"/>
+  </div>
+  <div class="preview">
+    <h2 class="section-header">Preview</h2>
+    <canvas class="preview-canvas" id="preview-canvas" width="1330" height="1000">
+      Canvas is not supported in your browser
+    </canvas>
+  </div>
+</div>
