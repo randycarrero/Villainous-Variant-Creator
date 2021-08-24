@@ -166,11 +166,11 @@ async function renderCards() {
     r: parseInt($("#borderRadius").val())
   };
   
-  drawCardStack(context, {
-    x: 40,
-    y: 0,
-    c: cardProps
-  });
+//   drawCardStack(context, {
+//     x: 40,
+//     y: 0,
+//     c: cardProps
+//   });
   
   drawCard(context, {
     x: 840,
