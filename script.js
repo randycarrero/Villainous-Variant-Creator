@@ -122,13 +122,6 @@ async function renderCards() {
     image: await loadImage(),
     r: parseInt($("#borderRadius").val())
   };
-  
-//   drawCardStack(context, {
-//     x: 40,
-//     y: 0,
-//     c: cardProps
-//   });
-  
   drawCard(context, {
     x: 840,
     y: 150,
