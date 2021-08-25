@@ -88,49 +88,6 @@ function drawCard(ctx, props) {
     ctx.stroke();
   }
 }
-
-function drawCardStack(ctx, props) {
-  context.save();
-  
-  // Stack properties
-  if (props.x === undefined || props.x === null) console.error("Please specify x-coordinate for the stack");
-  if (props.y === undefined || props.y === null) console.error("Please specify y-coordinate for the stack");
-  if (props.n === undefined || props.n === null) props.n = defaults.cardStack.number;
-  if (props.db === undefined || props.db === null) props.db = defaults.cardStack.degreesBetween;
-  if (props.sd === undefined || props.sd === null) props.sd = defaults.cardStack.startDegree;
-  
-  // Card properties
-  if (props.c === undefined || props.sd === null) props.c = {};
-  if (props.c.w === undefined || props.c.w === null) props.c.w = defaults.card.width;
-  if (props.c.h === undefined || props.c.h === null) props.c.h = defaults.card.height;
-  if (props.c.r === undefined || props.c.r === null) props.c.r = defaults.card.borderRadius;
-  if (props.c.sw === undefined || props.c.sw === null) props.c.sw = defaults.card.strokeWidth;
-  if (props.c.sc === undefined || props.c.sc === null) props.c.sc = defaults.card.strokeColour;
-  if (props.c.fc === undefined || props.c.fc === null) props.c.fc = defaults.card.fillColour;
-  if (props.c.shadow === undefined || props.c.shadow === null) props.c.shadow = defaults.card.shadow;
-  if (props.shadowColour === undefined || props.shadowColour === null) props.shadowColour = defaults.card.shadowColour;
-  if (props.shadowBlur === undefined || props.shadowBlur === null) props.shadowBlur = defaults.card.shadowBlur;
-  if (props.shadowOffsetY === undefined || props.shadowOffsetY === null) props.shadowOffsetY = defaults.card.shadowOffsetY;
-  
-  // Set the initial rotation
-  ctx.translate(props.x + props.c.w * 1.3, props.y + props.c.h * 1.3);
-  ctx.rotate(props.sd * Math.PI / 180);
-  ctx.translate(-(props.x + props.c.w * 1.3), -(props.y + props.c.h * 1.3))
-  
-  for (let i = 0; i < props.n; i++) {
-    ctx.translate(props.x + props.c.w * 1.3, props.y + props.c.h * 1.3);
-    ctx.rotate(props.db * Math.PI / 180);
-    ctx.translate(-(props.x + props.c.w * 1.3), -(props.y + props.c.h * 1.3))
-    drawCard(ctx, {
-      x: props.x + props.c.w * 0.3,
-      y: props.y + props.c.h * 0.3,
-      ...props.c
-    });
-  }
-  
-  ctx.restore();
-}
-
 async function loadImage() {
   const imageInput = $("#image").get(0);
   
@@ -166,11 +123,11 @@ async function renderCards() {
     r: parseInt($("#borderRadius").val())
   };
   
-  drawCardStack(context, {
-    x: 40,
-    y: 0,
-    c: cardProps
-  });
+//   drawCardStack(context, {
+//     x: 40,
+//     y: 0,
+//     c: cardProps
+//   });
   
   drawCard(context, {
     x: 840,
