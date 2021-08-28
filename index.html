@@ -4,63 +4,62 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Villinaus Board Game</title>
+    <title>Variant</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="Villainous-Variant-Creator-main\style.css">
+    <script src="fabric\fabric.min.js"></script>
+    <script src=".js"></script>
 </head>
+<header>
+    Welcome
+</header>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header class="header">
-        Villainous-Variant-Creator
-        <br>
-        Create  a new Variant  realm for a custom character.
-
-    </header>
-    <target="_blank" >
-        <div class="container">
-          <div class="form">
-            <h2 class="section-header">Card Settings</h2>
-            <div class="setting">
-              <label for="image">Image</label>
-              <input type="file" name="image" id="image"/>
-            </div>
-            <div class="setting">
-              <label for="fillColour">Background Colour</label>
-              <input type="text" class="colour-picker" name="fillColour" id="fillColour" value="#272727"/>
-            </div>
-            <div class="setting">
-              <label for="strokeColour">Stroke Colour</label>
-              <input type="text" class="colour-picker" name="strokeColour" id="strokeColour" value="#4B4B4B"/>
-            </div>
-            <div class="setting">
-              <label for="strokeWidth">Stroke Width</label>
-              <input type="number" name="strokeWidth" id="strokeWidth" value="20" min="0" max="150"/>
-            </div>
-            <div class="setting">
-              <label for="borderRadius">Border Radius</label>
-              <input type="number" name="borderRadius" id="borderRadius" value="29" min="0" max="200"/>
-            </div>
-            <h2 class="section-header">Export</h2>
-            <input type="button" value="Export Card" id="exportCard" />
-          </div>
-          <div class="preview">
-            <h2 class="section-header">Preview</h2>
-            <canvas class="preview-canvas" id="preview-canvas" width="1330" height="1000">
-              Canvas is not supported in your browser
-            </canvas>
-          </div>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <h2>Column 1</h2>
+            <p>Some text..</p>
         </div>
-        <script src="script.js"></script>
+        <div class="column" style="background-color:#bbb;">
+            <h2>Column 2</h2>
+            <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <h2>Column 3</h2>
+            <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:#ddd;">
+            <h2>Column 4</h2>
+            <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:rgba(221, 221, 221, 0.192);">
+            <h2>Column 5</h2>
+            <p>Some text..</p>
+        </div>
+    </div>
+    <br>
+    <canvas id="shani_canvas" width="1344" height="372">
+        <script>
+            var canvas = new fabric.Canvas('shani_canvas');
+            canvas.setBackgroundImage('https://raw.githubusercontent.com/randycarrero/Villainous-Variant-Creator/main/images/Realm%20back.png');
+            var Rectangle = new fabric.Rect({
+                width: 200,
+                height: 100,
+                top: 75,
+                left: 100,
+                fill: 'orange'
+            });
+            canvas.add(Rectangle);
+
+        </script>
 </body>
+
 </html>
