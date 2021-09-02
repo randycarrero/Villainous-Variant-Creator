@@ -157,3 +157,54 @@ ul li {
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
+
+.setting {
+  margin-bottom: 1rem;
+}
+.setting label {
+  font-size: 0.8em;
+  display:block;
+}
+.setting .spectrum, .setting > input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.setting > input:not([type=button]) {
+  margin-top: 0.5rem;
+}
+.setting > input:not([type=button]) {
+  margin-top: 0.5rem;
+}
+
+input[type=button], button {
+  padding: 7px 12px;
+  border-radius: 3px;
+  background-color: #004182;
+  outline: none;
+  border: 1px solid #0b5394;
+  color:white;
+  cursor: pointer;
+  
+  transition: background-color 0.1s ease-in-out;
+}
+
+input[type=button]:hover, button:hover {
+  background-color: #0b5394;
+  
+  transition: background-color 0.1s ease-in-out;
+}
+
+.setting .sp-colorize-container {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 35px !important;
+}
+
+.setting .sp-original-input-container {
+  margin-top: 0.5rem;
+  width: 100%;
+}

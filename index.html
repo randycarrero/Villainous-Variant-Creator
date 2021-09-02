@@ -18,7 +18,7 @@
     <section id="banner">
         <div class="inner">
             <h2 class="header">Villainous Variant Creator</h2>
-            <p class="header">Where you can create your own custome homebrew Villian.</a></p>
+            <p class="header">Where you can create your own custom homebrew Villian.</a></p>
         </div>
     </section>
 </header>
@@ -27,35 +27,72 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <button class="collapsible">Open Section 1</button>
+    <button class="collapsible">Villian Potrait</button>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+            <p>    <div class="setting">
+                <label for="fillColour">Background Colour</label>
+                <input type="text" class="colour-picker" name="fillColour" id="fillColour" value="#272727"/>
+                </div>
+            </p>
+            <div class="setting">
+                <label for="fname">Villian Name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image"/>
+              </div>
+              <div class="setting">
+              <label for="fname">Villian Objective:</label>
+              <input type="text" id="fname" name="fname"><br><br>
+              </div>
+           
     </div>
-    <button class="collapsible">Open Section 2</button>
+    <button class="collapsible">Location 1</button>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+        <p>            <div class="setting">
+            <label for="fname">Location Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image"/>
+          </div></p>
     </div>
-    <button class="collapsible">Open Section 3</button>
+    <button class="collapsible">Location 2</button>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
+      <p>  <div class="setting">
+                  <label for="fname">Location Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image"/>
+          </div></p>
+    </div>
+    <button class="collapsible">Location 3</button>
+    <div class="content">
+      <p>  <div class="setting">
+        <label for="fname">Location Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image"/>
+          </div></p>
+    </div>
+    <button class="collapsible">Location 4</button>
+    <div class="content">
+     <p> <div class="setting">
+        <label for="fname">Location Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image"/>
+          </div></p>  
     </div>
     <br> <br> <br> <br>
     <canvas id="shani_canvas" width="1344" height="372"></canvas>
     <script>
         var canvas = new fabric.Canvas('shani_canvas');
         canvas.setBackgroundImage('https://raw.githubusercontent.com/randycarrero/Villainous-Variant-Creator/main/images/Realm%20back.png');
+        
         var Rectangle = new fabric.Rect({
-            width: 200,
-            height: 100,
-            top: 75,
-            left: 100,
-            fill: 'orange'
+            width: 1344,
+            height: 372,
+            fill: 'orange',
+            opacity: .7
         });
         canvas.add(Rectangle);
 
