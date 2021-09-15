@@ -12,3 +12,9 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+$("#exportCard").click(function(){
+	$("#shani_canvas").get(0).toBlob(function(blob){
+		saveAs(blob, "Villainous_Realm.png");
+	});
+});
