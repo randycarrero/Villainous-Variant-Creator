@@ -37,8 +37,9 @@
     <div class="content">
         <p>
         <div class="setting">
-            <label for="fillColour">Background Colour</label>
-            <input type="text" class="colour-picker" name="fillColour" id="fillColour" value="#272727" />
+            <label for="fillColour">Background Color</label>
+            <!-- <input type="text" class="colour-picker" name="fillColour" id="fillColour" value="#272727" /> -->
+            <input id="color" type="color">
         </div>
         </p>
         <div class="setting">
@@ -108,21 +109,72 @@
         var text;
         var canvas;
 
-        var canvas = new fabric.Canvas('shani_canvas');
+        var canvas = new fabric.Canvas('shani_canvas', { backgroundColor: '#999' });
         canvas.setBackgroundImage('https://raw.githubusercontent.com/randycarrero/Villainous-Variant-Creator/main/images/Realm%20back.png');
-        var Rectangle = new fabric.Rect({
-            width: 1344,
-            height: 372,
-            fill: 'orange',
+        var Rectangle2 = new fabric.Rect({
+            left: 511,
+            top: 333,
+            width: 250,
+            height: 50,
+            stroke: 'red',
+            fill: 'grey',
+            strokeWidth: 2,
+            rx: 10,
+            ry: 10,
             opacity: .7,
+            selectable: false,
         });
-        canvas.add(Rectangle);
+        canvas.add(Rectangle2);
+        var Rectangle4 = new fabric.Rect({
+            left: 1070,
+            top: 333,
+            width: 250,
+            height: 50,
+            stroke: 'red',
+            fill: 'grey',
+            strokeWidth: 2,
+            rx: 10,
+            ry: 10,
+            opacity: .7,
+            selectable: false,
+        });
+        canvas.add(Rectangle4);
+        var Rectangle3 = new fabric.Rect({
+            left: 790,
+            top: 333,
+            width: 250,
+            height: 50,
+            stroke: 'red',
+            fill: 'grey',
+            strokeWidth: 2,
+            rx: 10,
+            ry: 10,
+            opacity: .7,
+            selectable: false,
+        });
+        canvas.add(Rectangle3);
+        var rect = new fabric.Rect({
+            left: 228,
+            top: 333,
+            width: 250,
+            height: 50,
+            stroke: 'red',
+            fill: 'grey',
+            strokeWidth: 2,
+            rx: 10,
+            ry: 10,
+            opacity: .7,
+            selectable: false,
+        });
+        canvas.add(rect);
         // input section
         villianname = new fabric.Text("Text", {
             id: "villianname",
             fontSize: 30,
             selectable: false,
-            left: 20,
+            originX: 'center',
+            originY: 'center',
+            left: 100,
             top: 200,
             text: "villianname",
             fill: '#f00'
