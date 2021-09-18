@@ -34,57 +34,6 @@ $('#color').on('change', ()=>{
     canvas.setBackgroundColor($('input#color').val())
     canvas.renderAll();
     })
-//image locations//
-    var location1img = new fabric.Rect({
-        left: 218,
-        top: 22,
-        width: 270,
-        height: 270,
-        stroke: 'red',
-        strokeWidth: 2,
-        rx:10,
-        ry:10,
-        selectable: false,
-      });
-      canvas.add(location1img);
-
-      var location2img = new fabric.Rect({
-        left: 500,
-        top: 22,
-        width: 270,
-        height: 270,
-        stroke: 'red',
-        strokeWidth: 2,
-        rx:10,
-        ry:10,
-        selectable: false,
-      });
-      canvas.add(location2img);
-      var location3img = new fabric.Rect({
-        left: 782,
-        top: 22,
-        width: 270,
-        height: 270,
-        stroke: 'red',
-        strokeWidth: 2,
-        rx:10,
-        ry:10,
-        selectable: false,
-      });
-      canvas.add(location3img);
-      var location4img = new fabric.Rect({
-        left: 1061,
-        top: 22,
-        width: 270,
-        height: 270,
-        stroke: 'red',
-        strokeWidth: 2,
-        rx:10,
-        ry:10,
-        selectable: false,
-      });
-      canvas.add(location4img);
-
 // hero[fate] card location//
       var Herocard3 = new fabric.Rect({
         left: 791,
@@ -143,17 +92,121 @@ $('#color').on('change', ()=>{
     });
     canvas.add(Herocard4);
     // Villian Potrait Box //
-var portrait = new fabric.Rect({
-    left: -5,
-    top: -10,
-    width: 210,
-    height: 520,
-    stroke: 'red',
-    fill:'grey',
-    strokeWidth: 2,
-    rx:10,
-    ry:10,
-    opacity: .7,
-    selectable: false,
-  });
-  canvas.add(portrait);
+    document.getElementById('portrait').onchange = function handleImage(e) {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          var imgObj = new Image();
+          imgObj.src = event.target.result;
+          imgObj.onload = function() {
+            var portrait = new fabric.Image(imgObj);
+            portrait.set({
+                left: -5,
+                top: -10,
+                width: 210,
+                height: 520,
+                stroke: 'red',
+                fill:'grey',
+                strokeWidth: 2,
+                rx:10,
+                ry:10,
+                opacity: .7,
+                selectable: false,
+            });
+            canvas.add(portrait);
+          };
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      };
+  //file upload//
+document.getElementById('imgLoader1').onchange = function handleImage(e) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var imgObj = new Image();
+      imgObj.src = event.target.result;
+      imgObj.onload = function() {
+        var image = new fabric.Image(imgObj);
+        image.set({
+            left: 218,
+            top: 22,
+            width: 270,
+            height: 270,
+            stroke: 'red',
+            strokeWidth: 2,
+            rx:10,
+            ry:10,
+            selectable: false,
+        });
+        canvas.add(image);
+      };
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  document.getElementById('imgLoader2').onchange = function handleImage(e) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var imgObj = new Image();
+      imgObj.src = event.target.result;
+      imgObj.onload = function() {
+        var image2 = new fabric.Image(imgObj);
+        image2.set({
+            left: 500,
+            top: 22,
+            width: 270,
+            height: 270,
+            stroke: 'red',
+            strokeWidth: 2,
+            rx:10,
+            ry:10,
+            selectable: false,
+        });
+        canvas.add(image2);
+      };
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  document.getElementById('imgLoader3').onchange = function handleImage(e) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var imgObj = new Image();
+      imgObj.src = event.target.result;
+      imgObj.onload = function() {
+        var image3 = new fabric.Image(imgObj);
+        image3.set({
+            left: 782,
+            top: 22,
+            width: 270,
+            height: 270,
+            stroke: 'red',
+            strokeWidth: 2,
+            rx:10,
+            ry:10,
+            selectable: false,
+        });
+        canvas.add(image3);
+      };
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  document.getElementById('imgLoader4').onchange = function handleImage(e) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var imgObj = new Image();
+      imgObj.src = event.target.result;
+      imgObj.onload = function() {
+        var image4 = new fabric.Image(imgObj);
+        image4.set({
+            left: 1061,
+            top: 22,
+            width: 270,
+            height: 270,
+            stroke: 'red',
+            strokeWidth: 2,
+            rx:10,
+            ry:10,
+            selectable: false,
+        });
+        canvas.add(image4);
+      };
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };

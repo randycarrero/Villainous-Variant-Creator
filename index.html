@@ -46,7 +46,7 @@
             <label for="fname">Villian Name:</label>
             <input class="input" data-text="villianname" value="villianname" id="villianname" /><br><br>
             <label for="image">Image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="portrait" />
         </div>
         <div class="setting">
             <label for="fname">Villian Objective:</label>
@@ -62,7 +62,7 @@
             <input class="input" data-text="location1" value="location1" id="location1" />
             <br><br>
             <label for="image">Image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="imgLoader1" />
         </div>
         </p>
     </div>
@@ -73,7 +73,7 @@
             <label for="fname">Location Name:</label>
             <input class="input" data-text="location2" value="location2" id="location2" /><br><br>
             <label for="image">Image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="imgLoader2" />
         </div>
         </p>
     </div>
@@ -85,7 +85,7 @@
             <input class="input" data-text="location3" value="location3" id="location3" />
             <br><br>
             <label for="image">Image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="imgLoader3" />
         </div>
         </p>
     </div>
@@ -96,7 +96,7 @@
             <label for="fname">Location Name:</label>
             <input class="input" data-text="location4" value="location4" id="location4" /><br><br>
             <label for="image">Image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="imgLoader4" />
         </div>
         </p>
     </div>
@@ -110,7 +110,7 @@
         var canvas;
 
         var canvas = new fabric.Canvas('shani_canvas', { backgroundColor: '#999' });
-        canvas.setBackgroundImage('https://raw.githubusercontent.com/randycarrero/Villainous-Variant-Creator/main/images/Realm%20back.png');
+        // canvas.setBackgroundImage('https://raw.githubusercontent.com/randycarrero/Villainous-Variant-Creator/main/images/Realm%20back.png');
         var Rectangle2 = new fabric.Rect({
             left: 511,
             top: 333,
@@ -184,8 +184,10 @@
             id: "location1",
             fontSize: 30,
             selectable: false,
-            left: 300,
-            top: 295,
+            originX: 'center',
+            originY: 'center',
+            left: 350,
+            top: 315,
             text: "location1",
             fill: '#f00'
         });
@@ -194,8 +196,10 @@
             id: "location2",
             fontSize: 30,
             selectable: false,
-            left: 585,
-            top: 295,
+            originX: 'center',
+            originY: 'center',
+            left: 640,
+            top: 315,
             text: "location2",
             fill: '#f00'
         });
@@ -204,8 +208,10 @@
             id: "location3",
             fontSize: 30,
             selectable: false,
-            left: 860,
-            top: 295,
+            originX: 'center',
+            originY: 'center',
+            left: 920,
+            top: 315,
             text: "location3",
             fill: '#f00'
         });
@@ -214,8 +220,10 @@
             id: "location4",
             fontSize: 30,
             selectable: false,
-            left: 1140,
-            top: 295,
+            originX: 'center',
+            originY: 'center',
+            left: 1200,
+            top: 315,
             text: "location4",
             fill: '#f00'
         });
