@@ -19,7 +19,7 @@ $("#exportCard").click(function(){
 	});
 });
     
-fabric.util.loadImage('https://duw6wk4ou1qt.cloudfront.net/files/v649/generator/57/men/front/BC3001_men_preview_front_dark.png', (image) => {
+fabric.util.loadImage('', (image) => {
     image = new fabric.Image(image);
   image.set({
     width: canvas.width,
